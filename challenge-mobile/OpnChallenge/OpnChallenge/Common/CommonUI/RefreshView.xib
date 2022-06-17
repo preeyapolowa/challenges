@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RefreshView" customModule="OpnChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="r3Q-Rz-iml" id="9W0-TM-Tih"/>
+                <outlet property="refreshButton" destination="0IE-xa-v3F" id="0af-DQ-U1b"/>
+                <outlet property="titleLabel" destination="w0A-I0-tjL" id="G7k-iu-lZj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1hc-a7-Far">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="295"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0A-I0-tjL">
+                    <rect key="frame" x="174.5" y="95" width="34" height="25.5"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IE-xa-v3F">
+                    <rect key="frame" x="154.5" y="186" width="74" height="31"/>
+                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Refresh"/>
+                    <connections>
+                        <action selector="didTapRefreshButton" destination="-1" eventType="touchUpInside" id="m4X-fX-zUO"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3Q-Rz-iml">
+                    <rect key="frame" x="147.5" y="128.5" width="88" height="25.5"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ZuU-qe-bJe"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="w0A-I0-tjL" firstAttribute="centerY" secondItem="1hc-a7-Far" secondAttribute="centerY" constant="-40" id="ExG-dL-oLJ"/>
+                <constraint firstItem="r3Q-Rz-iml" firstAttribute="top" secondItem="w0A-I0-tjL" secondAttribute="bottom" constant="8" id="UIr-YD-Wcf"/>
+                <constraint firstItem="r3Q-Rz-iml" firstAttribute="centerX" secondItem="1hc-a7-Far" secondAttribute="centerX" id="bgF-1P-QAH"/>
+                <constraint firstItem="w0A-I0-tjL" firstAttribute="centerX" secondItem="1hc-a7-Far" secondAttribute="centerX" id="iA9-Z5-gUp"/>
+                <constraint firstItem="0IE-xa-v3F" firstAttribute="top" secondItem="r3Q-Rz-iml" secondAttribute="bottom" constant="32" id="mGi-x9-eq4"/>
+                <constraint firstItem="0IE-xa-v3F" firstAttribute="centerX" secondItem="1hc-a7-Far" secondAttribute="centerX" id="wzU-q3-Jo5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-181.8840579710145" y="-133.59375"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

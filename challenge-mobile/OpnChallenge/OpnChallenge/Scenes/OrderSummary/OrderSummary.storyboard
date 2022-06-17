@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Order Summary View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="OrderSummaryViewController" id="Y6W-OH-hqX" customClass="OrderSummaryViewController" customModule="OpnChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uog-Lo-YHD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cF0-Wk-2zd">
+                                        <rect key="frame" x="24" y="16" width="12.5" height="22"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="medium"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapBackButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8yh-d1-2XW"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Summary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g78-km-jcC">
+                                        <rect key="frame" x="120" y="14.5" width="174.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="g78-km-jcC" firstAttribute="centerY" secondItem="cF0-Wk-2zd" secondAttribute="centerY" id="SaD-w1-ftk"/>
+                                    <constraint firstAttribute="height" constant="50" id="c4T-fd-Et9"/>
+                                    <constraint firstItem="g78-km-jcC" firstAttribute="centerX" secondItem="uog-Lo-YHD" secondAttribute="centerX" id="dmW-XR-6jV"/>
+                                    <constraint firstItem="cF0-Wk-2zd" firstAttribute="leading" secondItem="uog-Lo-YHD" secondAttribute="leading" constant="24" id="moa-ze-YRA"/>
+                                    <constraint firstItem="cF0-Wk-2zd" firstAttribute="top" secondItem="uog-Lo-YHD" secondAttribute="top" constant="16" id="uD2-7i-AJj"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500 ฿" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6c-J6-xOx">
+                                <rect key="frame" x="32" y="126" width="350" height="55.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-Fn-5IG">
+                                <rect key="frame" x="0.0" y="181.5" width="414" height="680.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhs-dc-2Ql">
+                                <rect key="frame" x="32" y="804" width="350" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.92941176469999998" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HO4-Wh-5bd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Confirm Order">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapConfirmButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Iep-WH-WEB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OVF-Fn-5IG" secondAttribute="trailing" id="37G-9D-ve2"/>
+                            <constraint firstItem="V6c-J6-xOx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="758-of-SwO"/>
+                            <constraint firstItem="OVF-Fn-5IG" firstAttribute="top" secondItem="V6c-J6-xOx" secondAttribute="bottom" id="7fK-QU-t5b"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="OVF-Fn-5IG" secondAttribute="bottom" id="9Ea-HF-kyZ"/>
+                            <constraint firstItem="V6c-J6-xOx" firstAttribute="top" secondItem="uog-Lo-YHD" secondAttribute="bottom" constant="32" id="Clp-WW-QbZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Yhs-dc-2Ql" secondAttribute="bottom" constant="32" id="I6p-Eb-vJc"/>
+                            <constraint firstItem="OVF-Fn-5IG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="MT4-kw-f7Z"/>
+                            <constraint firstItem="uog-Lo-YHD" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="SAq-Ab-H86"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Yhs-dc-2Ql" secondAttribute="trailing" constant="32" id="Y7N-X5-Lj4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="V6c-J6-xOx" secondAttribute="trailing" constant="32" id="Ybv-XR-e0W"/>
+                            <constraint firstItem="uog-Lo-YHD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="bYc-p8-p13"/>
+                            <constraint firstItem="Yhs-dc-2Ql" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="exl-C5-d8w"/>
+                            <constraint firstItem="uog-Lo-YHD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nbs-XE-N4d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="Yhs-dc-2Ql" id="cMg-h1-FkX"/>
+                        <outlet property="priceLabel" destination="V6c-J6-xOx" id="F9s-ia-brx"/>
+                        <outlet property="tableView" destination="OVF-Fn-5IG" id="fe8-pq-2l3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
